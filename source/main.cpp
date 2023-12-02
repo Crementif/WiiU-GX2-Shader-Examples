@@ -1,9 +1,9 @@
 #include "common.h"
 #include "navigation.h"
 
-#include "example_triangle.h"
-#include "example_texture.h"
-#include "example_tests.h"
+#include "example_triangle.cppm"
+#include "example_texture.cppm"
+#include "example_tests.cppm"
 
 int main() {
     WHBProcInit();
