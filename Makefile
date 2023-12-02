@@ -46,7 +46,7 @@ DRC_SPLASH	:=
 #-------------------------------------------------------------------------------
 CFLAGS		:=	-g -Wall -Werror -Wno-unused-variable -Wno-unused-but-set-variable -Wno-unused-function -Wno-strict-aliasing -O2 -ffunction-sections -fdata-sections $(MACHDEP) $(ROMFS_CFLAGS)
 
-CFLAGS		+=	$(INCLUDE) -std=c++20 -D__WIIU__ -D__WUT__
+CFLAGS		+=	$(INCLUDE) -std=c++20 -fmodules-ts -D__WIIU__ -D__WUT__
 
 CXXFLAGS	:=	$(CFLAGS)
 
@@ -87,6 +87,7 @@ export DEPSDIR	:=	$(CURDIR)/$(BUILD)
 
 CFILES			:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.c)))
 CPPFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.cpp)))
+CPPMFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.cppm)))
 SFILES			:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.s)))
 BINFILES		:=	$(foreach dir,$(DATA),$(notdir $(wildcard $(dir)/*.*)))
 
@@ -105,7 +106,7 @@ endif
 #-------------------------------------------------------------------------------
 
 export OFILES_BIN	:=	$(addsuffix .o,$(BINFILES))
-export OFILES_SRC	:=	$(CPPFILES:.cpp=.o) $(CFILES:.c=.o) $(SFILES:.s=.o)
+export OFILES_SRC	:=	$(CPPFILES:.cpp=.o) $(CPPMFILES:.cppm=.o) $(CFILES:.c=.o) $(SFILES:.s=.o)
 export OFILES 		:=	$(OFILES_BIN) $(OFILES_SRC)
 export HFILES_BIN	:=	$(addsuffix .h,$(subst .,_,$(BINFILES)))
 

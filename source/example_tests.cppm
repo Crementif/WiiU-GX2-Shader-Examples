@@ -1,4 +1,4 @@
-#include "common.h"
+export module ExampleTests;
 
 constexpr const char* s_integerVertexShader = R"(
 #version 450
@@ -39,7 +39,7 @@ void main()
 }
 )";
 
-class ExampleTests : public ExampleBase {
+export class ExampleTests : public ExampleBase {
 public:
     ExampleTests() {
         std::string errorLog(1024, '\0');

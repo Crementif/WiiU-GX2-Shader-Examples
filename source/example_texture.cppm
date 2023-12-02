@@ -1,6 +1,4 @@
-#pragma once
-#include "common.h"
-#include "TGATexture.h"
+export module ExampleTexture;
 
 constexpr const char* s_textureVertexShader = R"(
 #version 450
@@ -38,7 +36,7 @@ void main()
 }
 )";
 
-class ExampleTexture : public ExampleBase {
+export class ExampleTexture : public ExampleBase {
 public:
     ExampleTexture() {
         launchTime = OSGetTime();

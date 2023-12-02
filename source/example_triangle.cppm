@@ -1,5 +1,4 @@
-#pragma once
-#include "common.h"
+export module ExampleTriangle;
 
 constexpr const char* s_vertexShader = R"(
 #version 400 core
@@ -28,7 +27,7 @@ void main()
 }
 )";
 
-class ExampleTriangle : public ExampleBase {
+export class ExampleTriangle : public ExampleBase {
 public:
     ExampleTriangle() {
         // create shader group
