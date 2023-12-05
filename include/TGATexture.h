@@ -23,7 +23,16 @@ static GX2Texture* TGA_LoadTexture(uint8_t* data, uint32_t length) {
 
     uint32_t width = _swapU16(tgaHeader->width);
     uint32_t height = _swapU16(tgaHeader->height);
-
+    if(tgaHeader->bits != 32)
+    {
+        WHBLogPrintf("Only 32bit TGA images are supported");
+        return nullptr;
+    }
+    if(tgaHeader->imagetype != 2 && tgaHeader->imagetype != 3)
+    {
+        WHBLogPrintf("Only uncompressed TGA images are supported");
+        return nullptr;
+    }
     GX2Texture* texture = (GX2Texture*)MEMAllocFromDefaultHeap(sizeof(GX2Texture));
     memset(texture, 0, sizeof(GX2Texture));
     GX2SurfaceFormat gx2Format;
