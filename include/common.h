@@ -27,8 +27,6 @@
 #include <gx2r/draw.h>
 #include <gfd.h>
 
-#include <romfs-wiiu.h>
-
 uint16_t inline _swapU16(uint16_t v) {
     return (v>>8) | (v<<8);
 }

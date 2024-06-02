@@ -36,7 +36,7 @@ SOURCES		:=	source
 ROMFS		:=	assets
 DATA		:=	data
 INCLUDES	:=	include
-CONTENT		:=
+CONTENT		:=  assets
 ICON		:=
 TV_SPLASH	:=
 DRC_SPLASH	:=
@@ -58,7 +58,6 @@ LIBS		:=	-lwut
 #-------------------------------------------------------------------------------
 # options for libromfs
 #-------------------------------------------------------------------------------
-include $(PORTLIBS_PATH)/wiiu/share/romfs-wiiu.mk
 CFLAGS		+=	$(ROMFS_CFLAGS)
 CXXFLAGS	+=	$(ROMFS_CFLAGS)
 LIBS		+=	$(ROMFS_LIBS)
@@ -146,7 +145,7 @@ endif
 .PHONY: $(BUILD) clean all
 
 #-------------------------------------------------------------------------------
-all: app.romfs.o $(BUILD)
+all: $(BUILD)
 
 $(BUILD):
 	@$(shell [ ! -d $(BUILD) ] && mkdir -p $(BUILD))
@@ -155,7 +154,7 @@ $(BUILD):
 #-------------------------------------------------------------------------------
 clean:
 	@echo clean...
-	@rm -fr $(BUILD) $(TARGET).wuhb $(TARGET).rpx $(TARGET).elf app.romfs.o
+	@rm -fr $(BUILD) $(TARGET).wuhb $(TARGET).rpx $(TARGET).elf
 
 #-------------------------------------------------------------------------------
 else
