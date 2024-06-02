@@ -8,7 +8,6 @@
 int main() {
     WHBProcInit();
     WHBLogCafeInit();
-    romfsInit();
     initializeInputs();
     WHBGfxInit();
 
@@ -44,7 +43,6 @@ int main() {
 
     WHBGfxShutdown();
     shutdownInputs();
-    romfsExit();
     WHBLogCafeDeinit();
     WHBProcShutdown();
 }

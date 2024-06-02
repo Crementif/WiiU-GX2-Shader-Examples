@@ -88,7 +88,7 @@ ExampleTexture::ExampleTexture() {
     GX2RUnlockBufferEx(&s_texCoordBuffer, GX2R_RESOURCE_BIND_NONE);
 
     // upload texture
-    std::ifstream fs("romfs:/texture.tga", std::ios::in | std::ios::binary);
+    std::ifstream fs("fs:/vol/content/texture.tga", std::ios::in | std::ios::binary);
     if (!fs.is_open())
         return;
     std::vector<uint8_t> data((std::istreambuf_iterator<char>(fs)), std::istreambuf_iterator<char>());
