@@ -11,6 +11,8 @@ These GX2 samples use the new [CafeGLSL shader compiler](https://github.com/Exza
 
 ## External examples
  - ~~[Tank Trap](https://github.com/Crementif/UntitledSandGame)~~(releasing soon!) - A game-jam game made that also uses CafeGLSL!
+ - [Immaterial](https://github.com/glastonbridge/immaterial-wiiu-demo) ([Blog Article](http://www.slipstreamdemo.info/?p=137)) - A Wii U demo for Slipstream with 3D graphics rendered using a custom Wii U engine.
+ - [We Are Outdated](https://github.com/vurpo/we-are-outdated/) - A follow-up from the previous Wii U demo which additionally has framebuffer readback and other framebuffer effects.
  - [Super Mario 64 Port](https://github.com/aboood40091/sm64-port) - A port of Super Mario 64 to the Wii U showing general GX2 usage.
  - GTA3 Wii U port - A port of GTA3 to the Wii U that unfortunately got DMCA'd, although the source code is probably still somewhere online.
  - [angle](https://github.com/GaryOderNichts/angle/tree/wiiu/gx2) - A work-in-progress port of ANGLE which brings OpenGL ES support to the Wii U. This contains a lot of GX2 code and could help with porting OpenGL code.
