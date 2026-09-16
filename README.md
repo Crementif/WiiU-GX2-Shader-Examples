@@ -10,7 +10,7 @@ These GX2 samples use the new [CafeGLSL shader compiler](https://github.com/Exza
  - [Textured Quad](./source/example_texture.cpp) - Draws a texture on a full-screen quad
 
 ## External examples
- - ~~[Tank Trap](https://github.com/Crementif/UntitledSandGame)~~(releasing soon!) - A game-jam game made that also uses CafeGLSL!
+ - [Tank Trap](https://github.com/Crementif/UntitledSandGame) - A game-jam game made that also uses CafeGLSL!
  - [Immaterial](https://github.com/glastonbridge/immaterial-wiiu-demo) ([Blog Article](http://www.slipstreamdemo.info/?p=137)) - A Wii U demo for Slipstream with 3D graphics rendered using a custom Wii U engine.
  - [We Are Outdated](https://github.com/vurpo/we-are-outdated/) - A follow-up from the previous Wii U demo which additionally has framebuffer readback and other framebuffer effects.
  - [Super Mario 64 Port](https://github.com/aboood40091/sm64-port) - A port of Super Mario 64 to the Wii U showing general GX2 usage.
